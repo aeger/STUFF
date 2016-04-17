@@ -1,1 +1,7 @@
-TEST
+## Interface: 60200
+## Title: Stuff
+## Version: 1
+## Author: Aeger
+## Notes: Misc stuff.
+## SavedVariables: StuffDB
+## SavedVariablesPerCharacter: StuffCDB
