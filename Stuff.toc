@@ -5,3 +5,8 @@
 ## Notes: Misc stuff.
 ## SavedVariables: StuffDB
 ## SavedVariablesPerCharacter: StuffCDB
+## libs ##
+libs\libstuff.lua
+
+ExtraStuff\HelmCloakBTN.lua
+Stuff.lua
