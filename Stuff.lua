@@ -10,8 +10,8 @@ local name, aStuff = ...
 	
 	local function Load()
 	
-		if StuffDB.Ralert ~= true or false then
-			StuffDB.Ralert == true
+		if StuffDB["Ralert"] ~= true or false then
+			StuffDB["Ralert"] == true
 		end
 		
 	

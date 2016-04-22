@@ -2,7 +2,7 @@ local name, aStuff = ...
 
 local function RareAlert()
 -- Based completely off Rare Alert by Haleth/Freethinker
-	if not StuffDB.Ralert then return end
+	if not StuffDB["Ralert"] then return end
 
 	local blacklist = {
 	[971] = true, -- Alliance garrison
