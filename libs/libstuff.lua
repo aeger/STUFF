@@ -1,4 +1,4 @@
-local _, aStuff = ...
+local name, aStuff = ...
 
 ---------------------------------------------------------------------------
 --							Event Handler								 --
@@ -10,25 +10,43 @@ eventframe:SetScript("OnEvent", function(self, event, ...)
 			func(event, ...)
 		end
 	end
+	return aStuff[event] and aStuff[event](event, ...)
 end)
 
-function aStuff.RegisterEvent(event, func)
+function aStuff:RegisterEvent(event, func)
+
 	assert(type(event) == "string")
-	if not eventframe[event] then
-		eventframe[event] = {}
-	end
+
+	eventframe[event] = eventframe[event] or {}
+
 	table.insert(eventframe[event], func)
 	return eventframe:RegisterEvent(event)
 end
 
-function aStuff.UnregisterEvent(event, func) 
+function aStuff:UnregisterEvent(event, func)
 	if not eventframe[event] then return; end
-	if func and eventframe[event][func]  then
-		eventframe[event][func] = nil
-	end
-	if #eventframe[event] == 0 then
+	if func then
+		local tbl = eventframe[event]
+		for i = #tbl, 1, -1 do
+			if (tbl[i] == func) then
+				table.remove(tbl, i)
+				break;
+			end
+		end
+		if #tbl == 0 then
+			eventframe:UnregisterEvent(event)
+		end
+	else
 		eventframe:UnregisterEvent(event)
 	end
+end
+
+function aStuff:UnregisterAllEvents()
+	return eventframe:UnregisterAllEvents()
+end
+
+function aStuff:IsEventRegistered(event)
+	return eventframe:IsEventRegistered(event)
 end
 
 
