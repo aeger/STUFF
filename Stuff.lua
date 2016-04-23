@@ -8,16 +8,22 @@ local name, aStuff = ...
 	StuffDB = StuffDB or {}
 	StuffCDB = StuffCDB or {}
 	
-	local function Load()
+	local function RunOnce()
 	
-		if StuffDB["Ralert"] ~= true or false then
-			StuffDB["Ralert"] = true
-		end
-		
+		StuffDB = {
+      Ralert = true,
+      DisableChatFade = true
+   };
 	
 	end
 	
-	aStuff.RegisterEvent("ADDON_LOADED", Load)
+	local function StartUp()
+   if (StuffDB == nil) then
+      RunOnce();
+   end
+	end
+	
+	aStuff.RegisterEvent("ADDON_LOADED", StartUp)
 
 --	Version
 	LeaPlusLC["AddonVer"] = "6.2.38"
