@@ -23,7 +23,7 @@ local name, aStuff = ...
    end
 	end
 	
-	aStuff.RegisterEvent("ADDON_LOADED", StartUp)
+	aStuff.RegisterEvent("PLAYER_ENTERING_WORLD", StartUp)
 
 --	Version
 	LeaPlusLC["AddonVer"] = "6.2.38"
