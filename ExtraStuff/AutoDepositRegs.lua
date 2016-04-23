@@ -1,7 +1,7 @@
-local name, aStuff = ...
+local _, aStuff = ...
 
 local function autodeposit()
-	if AutoDepositRegs then 
+	if StuffCDB["AutoDepositRegs"] then 
 		if IsModifierKeyDown() then	
 			return
 		else

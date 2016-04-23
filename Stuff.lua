@@ -19,6 +19,7 @@
       Version = 1
     };
   	StuffCDB = {
+    	AutoDepositRegs = true,
     	TEST = 1,
     	TEST2 = 2
     };

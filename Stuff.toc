@@ -8,6 +8,6 @@
 ## libs ##
 libs\libstuff.lua
 
---ExtraStuff\HelmCloakBTN.lua
 Stuff.lua
 ExtraStuff\RareAlert.lua
+ExtraStuff\AutoDepositRegs.lua
