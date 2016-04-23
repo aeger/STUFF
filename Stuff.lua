@@ -11,11 +11,13 @@ local name, aStuff = ...
 	local function Load()
 	
 		if StuffDB["Ralert"] ~= true or false then
-			StuffDB["Ralert"] == true
+			StuffDB["Ralert"] = true
 		end
 		
 	
 	end
+	
+	aStuff.RegisterEvent("ADDON_LOADED", Load)
 
 --	Version
 	LeaPlusLC["AddonVer"] = "6.2.38"
