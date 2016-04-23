@@ -1,4 +1,5 @@
 local name, aStuff = ...
+local CharName = UnitName("player")
 
 ---------------------------------------------------------------------------
 --							Stuff       								 --
@@ -21,12 +22,13 @@ local name, aStuff = ...
    if (StuffDB == nil) then
       RunOnce();
    end
+   DEFAULT_CHAT_FRAME:AddMessage("|cFF00FF00Welcome back|r|cFFFF0000 "..CharName.."|r|cFF00FF00 type |r/aui |cFF00FF00for aegerUI options", 1.0, 1.0, 1.0, nil, true);
 	end
 	
-	aStuff.RegisterEvent("PLAYER_ENTERING_WORLD", StartUp)
+	aStuff.RegisterEvent("ADDON_LOADED", StartUp)
 
 --	Version
-	LeaPlusLC["AddonVer"] = "6.2.38"
+	--LeaPlusLC["AddonVer"] = "6.2.38"
 
 --  Reload  -------------------------------------------------------------------
 SLASH_RELOADUI1 = "/rl"
