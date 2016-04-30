@@ -1,51 +1,30 @@
-  local _, aStuff = ...
+  local name, ns = ...
   local CharName = UnitName("player")
+  
+  _G['StuffGlobal'] = {
+	GlobalConfig = ns.GlobalConfig,
+	SetupFrameForSliding = ns.SetupFrameForSliding,
+	UIFrameFadeIn = ns.UIFrameFadeIn,
+	UIFrameFadeOut = ns.UIFrameFadeOut,
+	CreateBorder = ns.CreateBorder,
+}
 
 ---------------------------------------------------------------------------
 --							Stuff       								 --
 ---------------------------------------------------------------------------
 		
-	local function aStuffGreeting()
-		if not StuffDB.Greeting then return end
+	local function StuffGreeting()
+		if not StuffDB["Greeting"] then return end
 			DEFAULT_CHAT_FRAME:AddMessage("|cFF00FF00Welcome back|r|cFFFF0000 "..CharName.."", 1.0, 1.0, 1.0, nil, true);
 		end
+		
 	
-	
-	local function aStuffDBLoad()
-		StuffDB = {
-      DisableChatFade = true,
-      Greeting = true,
-      Ralert = true,
-      Version = 1
-    };
-  	StuffCDB = {
-    	AutoDepositRegs = true,
-    	TEST = 1,
-    	TEST2 = 2
-    };
-  end
-  
-  local function aStuffDBupgrade()
-		StuffDB = {
-      DisableChatFade = true,
-      Greeting = true,
-      Ralert = true,
-      Version = 1
-    };
-	end
-	
-	local function aStuffLoaded()
-   if (StuffDB == nil) then
-      aStuffDBLoad();
-   end
-   if StuffDB.Version ~= 2 then
-   	aStuffDBupgrade()
-   end
-   aStuffGreeting()
-   aStuff:UnregisterEvent("PLAYER_LOGIN")
-  end
+	--local function StuffLoaded()
+   --ns:UnregisterEvent("PLAYER_LOGIN")
+   --StuffGreeting()
+  --end
   	
-	aStuff.RegisterEvent("PLAYER_LOGIN", aStuffLoaded)
+	--ns.RegisterEvent("PLAYER_LOGIN", StuffLoaded)
 
 --  Reload  -------------------------------------------------------------------
   SLASH_RELOADUI1 = "/rl"

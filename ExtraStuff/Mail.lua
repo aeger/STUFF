@@ -4,7 +4,7 @@
 			with pooooooowar.
 
 --]======================================================]
-local _, aStuff = ...
+local _, ns = ...
 if (not ns.Config.EnableMailModule) then return; end
 
 local LOOTDELAY = 0.3

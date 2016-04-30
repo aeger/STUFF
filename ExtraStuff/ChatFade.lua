@@ -1,8 +1,8 @@
-local name, aStuff = ...
+local name, ns = ...
 
 local function ChatFade()
-	BazookaBar_1:Hide()
-		if DisableChatFade then
+	--BazookaBar_1:Hide()
+		if (ns.Config.DisableChatFade) then
 			for i = 1, NUM_CHAT_WINDOWS do
 				_G[("ChatFrame" .. i)]:SetFading(false)
 			end
@@ -16,4 +16,4 @@ local function ChatFade()
 		end	
 	end
 
-aStuff.RegisterEvent("PLAYER_LOGIN", ChatFade)
+ns.RegisterEvent("PLAYER_LOGIN", ChatFade)

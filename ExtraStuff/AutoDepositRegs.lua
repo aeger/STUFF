@@ -1,7 +1,7 @@
-local _, aStuff = ...
+local name, ns = ...
 
 local function autodeposit()
-	if StuffCDB["AutoDepositRegs"] then 
+	if (ns.Config.AutoDepositRegs) then 
 		if IsModifierKeyDown() then	
 			return
 		else
@@ -14,9 +14,9 @@ local function autodeposit()
 	end
 
 	DepositReagentBank()
-		aStuff.Print("Reagents deposited in the bank.")
+		ns.Print("Reagents deposited in the bank.")
 	end
 	end
 end
 
-aStuff.RegisterEvent("BANKFRAME_OPENED", autodeposit)
+ns.RegisterEvent("BANKFRAME_OPENED", autodeposit)

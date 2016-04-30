@@ -3,11 +3,33 @@
 ## Version: 1
 ## Author: Aeger
 ## Notes: Misc stuff.
-## SavedVariables: StuffDB
-## SavedVariablesPerCharacter: StuffCDB
+
 ## libs ##
 libs\libstuff.lua
 
+Tools\animations.lua
+Tools\api.lua
+
+defaults.lua
+Config.lua
+
+
 Stuff.lua
-ExtraStuff\RareAlert.lua
+
 ExtraStuff\AutoDepositRegs.lua
+ExtraStuff\ChateFade.lua
+--ExtraStuff\HelmCloakBTN.lua
+ExtraStuff\fonts.lua
+ExtraStuff\HideBodyGuard.lua
+ExtraStuff\Mail.lua
+ExtraStuff\RareAlert.lua
+ExtraStuff\SendStuff.lua
+--ExtraStuff\StopAddonSpam.lua
+ExtraStuff\TalentMacro.lua
+ExtraStuff\ToolTip.lua
+ExtraStuff\Vendor.lua
+
+Skins\AddOns.lua
+Skins\MiniMap.lua
+Skins\Recolor.lua
+Skins\SpeechBubbles.lua

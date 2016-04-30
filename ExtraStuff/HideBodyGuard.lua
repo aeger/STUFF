@@ -1,4 +1,4 @@
-local name, aStuff = ...
+local name, ns = ...
 
 local function BodyGuardHide()
 			-- Do nothing if shift is being held
@@ -22,4 +22,4 @@ local function BodyGuardHide()
 			end
 end
 
-aStuff.RegisterEvent("GOSSIP_SHOW", BodyGuardHide)
+ns.RegisterEvent("GOSSIP_SHOW", BodyGuardHide)
