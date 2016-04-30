@@ -22,4 +22,4 @@ local function BodyGuardHide()
 			end
 end
 
-ns.RegisterEvent("GOSSIP_SHOW", BodyGuardHide)
+ns:RegisterEvent("GOSSIP_SHOW", BodyGuardHide)

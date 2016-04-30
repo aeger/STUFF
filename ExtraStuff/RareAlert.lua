@@ -15,4 +15,4 @@
 		RaidNotice_AddMessage(RaidWarningFrame, "OMFG Rare Get It!", ChatTypeInfo["RAID_WARNING"])
 	end
 
-	ns.RegisterEvent("VIGNETTE_ADDED", RareAlert)
+	ns:RegisterEvent("VIGNETTE_ADDED", RareAlert)

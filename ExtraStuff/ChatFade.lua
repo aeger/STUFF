@@ -16,4 +16,4 @@ local function ChatFade()
 		end	
 	end
 
-ns.RegisterEvent("PLAYER_LOGIN", ChatFade)
+ns:RegisterEvent("PLAYER_LOGIN", ChatFade)

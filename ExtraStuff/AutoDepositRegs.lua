@@ -14,9 +14,9 @@ local function autodeposit()
 	end
 
 	DepositReagentBank()
-		ns.Print("Reagents deposited in the bank.")
+		ns:Print("Reagents deposited in the bank.")
 	end
 	end
 end
 
-ns.RegisterEvent("BANKFRAME_OPENED", autodeposit)
+ns:RegisterEvent("BANKFRAME_OPENED", autodeposit)
