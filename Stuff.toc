@@ -3,21 +3,32 @@
 ## Version: 1
 ## Author: Aeger
 ## Notes: Misc stuff. Most code stolen from Sticklord AbuEssentials.
+## Dependencies: Bazooka
+## SavedVariables: StuffDB
+## SavedVariablesPerCharacter: StuffDBPC
 
 ## libs ##
 libs\libstuff.lua
 
+
 Config.lua
+Setup.lua
+Install\addons.xml
 
 Stuff.lua
 
+--ExtraStuff\ActionBars.lua
 ExtraStuff\AutoDepositRegs.lua
+ExtraStuff\UnitFrame.lua
 ExtraStuff\ChateFade.lua
---ExtraStuff\HelmCloakBTN.lua
 ExtraStuff\HideBodyGuard.lua
 ExtraStuff\Mail.lua
+ExtraStuff\minimap.lua
 ExtraStuff\RareAlert.lua
+ExtraStuff\TopMenu.lua
 --ExtraStuff\SendStuff.lua
 --ExtraStuff\StopAddonSpam.lua
 --ExtraStuff\TalentMacro.lua
 ExtraStuff\Vendor.lua
+
+--IconTest.xml

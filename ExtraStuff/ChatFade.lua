@@ -2,9 +2,11 @@ local name, ns = ...
 
 local function ChatFade()
 	--BazookaBar_1:Hide()
-		if (ns.Config.DisableChatFade) then
-			for i = 1, NUM_CHAT_WINDOWS do
-				_G[("ChatFrame" .. i)]:SetFading(false)
+		if (StuffDB.DisableChatFade) then
+			for i = 1, 50 do
+				if _G["ChatFrame" .. i] then
+					_G["ChatFrame" .. i]:SetFading(false)
+				end
 			end
 			-- Process temporary frames
 			hooksecurefunc("FCF_OpenTemporaryWindow", function()

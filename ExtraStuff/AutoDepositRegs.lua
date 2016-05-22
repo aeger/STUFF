@@ -1,7 +1,7 @@
 local name, ns = ...
 
 local function autodeposit()
-	if (ns.Config.AutoDepositRegs) then 
+	if (StuffDBPC.AutoDepositRegs) then 
 		if IsModifierKeyDown() then	
 			return
 		else

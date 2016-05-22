@@ -242,15 +242,15 @@ end)
 ns:RegisterEvent("MERCHANT_SHOW", function(event, ...)
 	if IsShiftKeyDown() then return; end
 
-	if(ns.Config.Vendor.AutoRepair) then
+	if(StuffDB.AutoRepair) then
 		repair()
 	end
 
-	if(ns.Config.Vendor.SellGreyCrap) then
+	if(StuffDB.SellGreyCrap) then
 		sellCrap(IsAltKeyDown() and IsControlKeyDown())
 	end
 
-	if(ns.Config.Vendor.BuyEssentials) then
+	if(StuffDB.BuyEssentials) then
 		restock()
 	end
 end)

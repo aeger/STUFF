@@ -5,7 +5,7 @@
 
 --]======================================================]
 local _, ns = ...
-if (not ns.Config.EnableMailModule) then return; end
+if (not StuffDB.EnableMailModule) then return; end
 
 local LOOTDELAY = 0.3
 local MAX_LOOPS = 5
