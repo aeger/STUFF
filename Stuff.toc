@@ -1,6 +1,6 @@
-## Interface: 60200
+## Interface: 70000
 ## Title: Stuff
-## Version: 1
+## Version: 3
 ## Author: Aeger
 ## Notes: Misc stuff. Most code stolen from Sticklord AbuEssentials.
 ## Dependencies: Bazooka
@@ -9,26 +9,28 @@
 
 ## libs ##
 libs\libstuff.lua
+libs\LibDataBroker-1.1.lua
 
-
-Config.lua
 Setup.lua
 Install\addons.xml
 
 Stuff.lua
+Options.lua
 
---ExtraStuff\ActionBars.lua
+ExtraStuff\ActionBars.lua
 ExtraStuff\AutoDepositRegs.lua
+ExtraStuff\Buffs.lua
 ExtraStuff\UnitFrame.lua
-ExtraStuff\ChateFade.lua
+ExtraStuff\ChatMods.lua
 ExtraStuff\HideBodyGuard.lua
 ExtraStuff\Mail.lua
 ExtraStuff\minimap.lua
 ExtraStuff\RareAlert.lua
 ExtraStuff\TopMenu.lua
 --ExtraStuff\SendStuff.lua
---ExtraStuff\StopAddonSpam.lua
---ExtraStuff\TalentMacro.lua
 ExtraStuff\Vendor.lua
 
---IconTest.xml
+BrokerPlugins\AutoLoot.lua
+BrokerPlugins\BDurability.lua
+BrokerPlugins\TinyDPS.lua
+BrokerPlugins\Zygors.lua

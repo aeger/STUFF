@@ -1,12 +1,12 @@
-local AUI, aui = ...
+local name, ns = ...
 local profileVersion = "1.0"
  
- function aui.BagSyncOptions()
+ function StuffInstallBagSync()
 	if not IsAddOnLoaded("BagSync") then return end
 	
-	if aegerUI.db.global.addonProfileVersion.BagSync ~= profileVersion then
+	if (StuffDB.addonProfileVersion.BagSync == nil) or (StuffDB.addonProfileVersion.BagSync ~= profileVersion) then
 		
-	_G.aegerUI_BS_Profile_Defaults = {
+	_G.Stuff_BagSync_Install = {
 				["enableAuction"] = true,
 				["showGuildNames"] = true,
 				["tooltipOnlySearch"] = false,
@@ -20,9 +20,9 @@ local profileVersion = "1.0"
 				["enableMinimap"] = false,
 	}
 
-	for k,v in pairs(aegerUI_BS_Profile_Defaults) do
+	for k,v in pairs(Stuff_BagSync_Install) do
 		BagSyncOpt[k] = v
-		aegerUI.db.global.addonProfileVersion.BagSync = profileVersion
+		StuffDB.addonProfileVersion.BagSync = profileVersion
 	end
 	end
 end

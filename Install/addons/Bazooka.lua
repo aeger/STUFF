@@ -11,132 +11,73 @@ function StuffInstallBazooka()
 			["numBars"] = 3,
 			["plugins"] = {
 				["data source"] = {
+					["BugSack"] = {
+						["area"] = "center",
+						["pos"] = 1,
+						["bar"] = 3,
+					},
+					["Portable"] = {
+						["enabled"] = false,
+						["showText"] = false,
+						["pos"] = 10,
+						["bar"] = 3,
+					},
+					["GGSocialState"] = {
+						["showIcon"] = false,
+						["area"] = "left",
+						["pos"] = 4,
+						["bar"] = 3,
+					},
+					["iCPU"] = {
+						["area"] = "left",
+						["pos"] = 9,
+						["bar"] = 3,
+					},
 					["DailyGlobalCheck_broker"] = {
 						["enabled"] = false,
 						["pos"] = 14,
 					},
-					["|cFFFFB366Ara|r Tradeskills"] = {
+					["iReputation"] = {
+						["pos"] = 1,
+					},
+					["Daily Global Check"] = {
+						["enabled"] = false,
+						["pos"] = 8,
+						["bar"] = 3,
+					},
+					["MyProf"] = {
 						["showText"] = false,
-						["pos"] = 13,
+						["pos"] = 11,
 						["bar"] = 3,
 					},
-					["BugSack"] = {
-						["area"] = "left",
-						["enabled"] = false,
-						["pos"] = 1,
-					},
-					["Broker_TimelessIsleChests"] = {
-						["enabled"] = false,
-						["pos"] = 14,
-					},
-					["Broker_DurabilityInfo"] = {
+					["Broker_wDurability"] = {
 						["showIcon"] = false,
 						["area"] = "left",
-						["pos"] = 12,
+						["pos"] = 8,
 						["bar"] = 3,
 					},
-					["SOCD - Daily Reset"] = {
-						["enabled"] = false,
-						["pos"] = 12,
-					},
-					["Broker_MicroMenu"] = {
+					["iMoney"] = {
 						["showIcon"] = false,
-						["area"] = "center",
-						["bar"] = 2,
-						["pos"] = 1,
-					},
-					["Progress"] = {
-						["showIcon"] = false,
-						["area"] = "center",
+						["pos"] = 6,
 						["bar"] = 3,
-						["pos"] = 1,
 					},
 					["BagSyncLDB"] = {
 						["area"] = "left",
 						["enabled"] = false,
 						["showText"] = false,
 					},
-					["Broker_MoneyFu"] = {
-						["showIcon"] = false,
-						["area"] = "left",
-						["pos"] = 10,
-						["bar"] = 3,
-					},
-					["SOCD-AltTrack"] = {
-						["enabled"] = false,
-						["pos"] = 11,
-					},
-					["Memory"] = {
-						["area"] = "left",
-						["enabled"] = false,
-					},
-					["DualSpeccer"] = {
-						["area"] = "left",
-						["enabled"] = false,
-					},
-					["SocialState"] = {
-						["showIcon"] = false,
-						["area"] = "left",
-						["pos"] = 8,
-						["bar"] = 3,
-					},
-					["TimelessDailyCheck"] = {
-						["enabled"] = false,
-						["pos"] = 1,
-					},
 				},
 				["launcher"] = {
-					["Masque"] = {
-						["enabled"] = false,
-					},
-					["AtlasLoot"] = {
-						["enabled"] = false,
-					},
-					["Parrot"] = {
-						["enabled"] = false,
-					},
-					["TinyDPS"] = {
-						["area"] = "right",
-						["pos"] = 7,
-						["bar"] = 3,
-					},
 					["AutoLootToggle"] = {
 						["pos"] = 1,
 					},
-					["Bartender4"] = {
-						["enabled"] = false,
-					},
-					["AvgItemLvl"] = {
-						["enabled"] = false,
-						["pos"] = 9,
-					},
-					["AskMrRobot"] = {
-						["enabled"] = false,
-					},
 					["Bazooka"] = {
-						["enabled"] = false,
-					},
-					["IfThen Edit"] = {
-						["enabled"] = false,
-						["pos"] = 13,
-					},
-					["Prat"] = {
-						["enabled"] = false,
-					},
-					["GatherMate2"] = {
 						["enabled"] = false,
 					},
 					["Zygors"] = {
 						["area"] = "right",
 						["pos"] = 11,
 						["bar"] = 3,
-					},
-					["TradeSkillInfo"] = {
-						["enabled"] = false,
-					},
-					["IfThen Help"] = {
-						["enabled"] = false,
-						["pos"] = 14,
 					},
 				},
 			},
@@ -180,144 +121,28 @@ function StuffInstallBazooka()
 			["numBars"] = 3,
 			["plugins"] = {
 				["data source"] = {
-					["DailyGlobalCheck_broker"] = {
-						["enabled"] = false,
-						["pos"] = 14,
-					},
-					["|cFFFFB366Ara|r Tradeskills"] = {
-						["showText"] = false,
-						["pos"] = 13,
-						["bar"] = 3,
-					},
 					["BugSack"] = {
 						["area"] = "left",
 						["enabled"] = false,
 						["pos"] = 1,
 					},
-					["Broker_TimelessIsleChests"] = {
-						["area"] = "left",
-						["bar"] = 3,
-						["pos"] = 3,
-					},
-					["Broker_DurabilityInfo"] = {
-						["showIcon"] = false,
-						["area"] = "left",
-						["enabled"] = false,
-						["pos"] = 12,
-						["bar"] = 3,
-					},
-					["SOCD - Daily Reset"] = {
-						["enabled"] = false,
-						["pos"] = 12,
-					},
-					["Broker_MicroMenu"] = {
-						["showIcon"] = false,
+					["Portable"] = {
 						["area"] = "center",
-						["bar"] = 2,
-						["pos"] = 1,
-					},
-					["Aanye_XP"] = {
-						["showIcon"] = false,
-						["area"] = "center",
-						["enabled"] = false,
-						["pos"] = 1,
 						["bar"] = 3,
-					},
-					["BagSyncLDB"] = {
-						["area"] = "left",
-						["showText"] = false,
 						["pos"] = 4,
-						["bar"] = 3,
-					},
-					["Broker_MoneyFu"] = {
-						["showIcon"] = false,
-						["area"] = "left",
-						["enabled"] = false,
-						["pos"] = 10,
-						["bar"] = 3,
-					},
-					["SOCD-AltTrack"] = {
-						["enabled"] = false,
-						["pos"] = 11,
-					},
-					["Memory"] = {
-						["area"] = "left",
-						["enabled"] = false,
-					},
-					["DualSpeccer"] = {
-						["area"] = "center",
-						["pos"] = 1,
-						["bar"] = 3,
-					},
-					["SocialState"] = {
-						["showIcon"] = false,
-						["area"] = "left",
-						["enabled"] = false,
-						["pos"] = 8,
-						["bar"] = 3,
-					},
-					["TimelessDailyCheck"] = {
-						["enabled"] = false,
-						["pos"] = 1,
 					},
 				},
 				["launcher"] = {
-					["Masque"] = {
-						["enabled"] = false,
-					},
-					["AtlasLoot"] = {
-						["pos"] = 1,
-						["bar"] = 3,
-					},
-					["Parrot"] = {
-						["enabled"] = false,
-					},
-					["TinyDPS"] = {
-						["area"] = "right",
-						["pos"] = 7,
-						["bar"] = 3,
-					},
 					["AutoLootToggle"] = {
 						["pos"] = 1,
 					},
-					["Bartender4"] = {
-						["enabled"] = false,
-					},
-					["AvgItemLvl"] = {
-						["enabled"] = false,
-						["bar"] = 3,
-						["pos"] = 9,
-					},
-					["AskMrRobot"] = {
-						["area"] = "right",
-						["pos"] = 2,
-						["bar"] = 3,
-					},
 					["Bazooka"] = {
 						["enabled"] = false,
-					},
-					["IfThen Edit"] = {
-						["enabled"] = false,
-						["pos"] = 13,
-					},
-					["Prat"] = {
-						["enabled"] = false,
-					},
-					["GatherMate2"] = {
-						["pos"] = 5,
-						["bar"] = 3,
 					},
 					["Zygors"] = {
 						["area"] = "right",
 						["pos"] = 11,
 						["bar"] = 3,
-					},
-					["TradeSkillInfo"] = {
-						["enabled"] = false,
-					},
-					["IfThen Help"] = {
-						["enabled"] = false,
-						["pos"] = 14,
 					},
 				},
 			},
@@ -361,137 +186,15 @@ function StuffInstallBazooka()
 			["numBars"] = 3,
 			["plugins"] = {
 				["data source"] = {
-					["DailyGlobalCheck_broker"] = {
-						["enabled"] = false,
-						["pos"] = 14,
-					},
-					["|cFFFFB366Ara|r Tradeskills"] = {
-						["showText"] = false,
-						["pos"] = 13,
-						["bar"] = 3,
-					},
 					["BugSack"] = {
 						["area"] = "left",
 						["enabled"] = false,
 						["pos"] = 1,
 					},
-					["Broker_TimelessIsleChests"] = {
-						["enabled"] = false,
-						["pos"] = 14,
-					},
-					["Broker_DurabilityInfo"] = {
-						["showIcon"] = false,
-						["area"] = "left",
-						["enabled"] = false,
-						["pos"] = 12,
-						["bar"] = 3,
-					},
-					["SOCD - Daily Reset"] = {
-						["enabled"] = false,
-						["pos"] = 12,
-					},
-					["Broker_MicroMenu"] = {
-						["showIcon"] = false,
-						["area"] = "center",
-						["bar"] = 2,
-						["pos"] = 1,
-					},
-					["Aanye_XP"] = {
-						["showIcon"] = false,
-						["area"] = "center",
-						["enabled"] = false,
-						["pos"] = 1,
-						["bar"] = 3,
-					},
-					["BagSyncLDB"] = {
-						["area"] = "left",
-						["enabled"] = false,
-						["showText"] = false,
-					},
-					["Broker_MoneyFu"] = {
-						["showIcon"] = false,
-						["area"] = "left",
-						["enabled"] = false,
-						["pos"] = 10,
-						["bar"] = 3,
-					},
-					["SOCD-AltTrack"] = {
-						["enabled"] = false,
-						["pos"] = 11,
-					},
-					["Memory"] = {
-						["area"] = "center",
-						["pos"] = 1,
-						["bar"] = 3,
-					},
-					["DualSpeccer"] = {
-						["area"] = "left",
-						["enabled"] = false,
-					},
-					["SocialState"] = {
-						["showIcon"] = false,
-						["area"] = "left",
-						["enabled"] = false,
-						["pos"] = 8,
-						["bar"] = 3,
-					},
-					["TimelessDailyCheck"] = {
-						["enabled"] = false,
-						["pos"] = 1,
-					},
 				},
 				["launcher"] = {
-					["Masque"] = {
-						["enabled"] = false,
-					},
-					["AtlasLoot"] = {
-						["enabled"] = false,
-					},
-					["Parrot"] = {
-						["enabled"] = false,
-					},
-					["TinyDPS"] = {
-						["area"] = "right",
-						["pos"] = 7,
-						["bar"] = 3,
-					},
 					["AutoLootToggle"] = {
 						["pos"] = 1,
-					},
-					["Bartender4"] = {
-						["enabled"] = false,
-					},
-					["AvgItemLvl"] = {
-						["enabled"] = false,
-						["pos"] = 9,
-					},
-					["AskMrRobot"] = {
-						["enabled"] = false,
-					},
-					["Bazooka"] = {
-						["enabled"] = false,
-					},
-					["IfThen Edit"] = {
-						["bar"] = 3,
-						["pos"] = 2,
-					},
-					["Prat"] = {
-						["enabled"] = false,
-					},
-					["GatherMate2"] = {
-						["enabled"] = false,
-					},
-					["Zygors"] = {
-						["area"] = "right",
-						["pos"] = 11,
-						["bar"] = 3,
-					},
-					["TradeSkillInfo"] = {
-						["enabled"] = false,
-					},
-					["IfThen Help"] = {
-						["bar"] = 3,
-						["pos"] = 3,
 					},
 				},
 			},
@@ -535,141 +238,15 @@ function StuffInstallBazooka()
 			["numBars"] = 3,
 			["plugins"] = {
 				["data source"] = {
-					["DailyGlobalCheck_broker"] = {
-						["enabled"] = false,
-						["pos"] = 14,
-					},
-					["|cFFFFB366Ara|r Tradeskills"] = {
-						["showText"] = false,
-						["pos"] = 13,
-						["bar"] = 3,
-					},
 					["BugSack"] = {
 						["area"] = "left",
 						["enabled"] = false,
 						["pos"] = 1,
 					},
-					["Broker_TimelessIsleChests"] = {
-						["enabled"] = false,
-						["pos"] = 14,
-					},
-					["Broker_DurabilityInfo"] = {
-						["showIcon"] = false,
-						["area"] = "left",
-						["enabled"] = false,
-						["pos"] = 12,
-						["bar"] = 3,
-					},
-					["SOCD - Daily Reset"] = {
-						["enabled"] = false,
-						["pos"] = 12,
-					},
-					["Broker_MicroMenu"] = {
-						["showIcon"] = false,
-						["area"] = "center",
-						["bar"] = 2,
-						["pos"] = 1,
-					},
-					["Aanye_XP"] = {
-						["showIcon"] = false,
-						["area"] = "center",
-						["enabled"] = false,
-						["pos"] = 1,
-						["bar"] = 3,
-					},
-					["BagSyncLDB"] = {
-						["area"] = "left",
-						["enabled"] = false,
-						["showText"] = false,
-					},
-					["Broker_MoneyFu"] = {
-						["showIcon"] = false,
-						["area"] = "left",
-						["enabled"] = false,
-						["pos"] = 10,
-						["bar"] = 3,
-					},
-					["SOCD-AltTrack"] = {
-						["enabled"] = false,
-						["pos"] = 11,
-					},
-					["Memory"] = {
-						["area"] = "left",
-						["enabled"] = false,
-					},
-					["DualSpeccer"] = {
-						["area"] = "left",
-						["enabled"] = false,
-					},
-					["SocialState"] = {
-						["showIcon"] = false,
-						["area"] = "left",
-						["enabled"] = false,
-						["pos"] = 8,
-						["bar"] = 3,
-					},
-					["TimelessDailyCheck"] = {
-						["enabled"] = false,
-						["pos"] = 1,
-					},
 				},
 				["launcher"] = {
-					["Masque"] = {
-						["pos"] = 4,
-						["bar"] = 3,
-					},
-					["AtlasLoot"] = {
-						["enabled"] = false,
-					},
-					["Parrot"] = {
-						["pos"] = 3,
-						["bar"] = 3,
-					},
-					["TinyDPS"] = {
-						["area"] = "right",
-						["pos"] = 7,
-						["bar"] = 3,
-					},
 					["AutoLootToggle"] = {
 						["pos"] = 1,
-					},
-					["Bartender4"] = {
-						["pos"] = 5,
-						["bar"] = 3,
-					},
-					["AvgItemLvl"] = {
-						["enabled"] = false,
-						["pos"] = 9,
-					},
-					["AskMrRobot"] = {
-						["enabled"] = false,
-					},
-					["Bazooka"] = {
-						["enabled"] = false,
-					},
-					["IfThen Edit"] = {
-						["enabled"] = false,
-						["pos"] = 13,
-					},
-					["Prat"] = {
-						["enabled"] = false,
-						["pos"] = 2,
-						["bar"] = 3,
-					},
-					["GatherMate2"] = {
-						["enabled"] = false,
-					},
-					["Zygors"] = {
-						["area"] = "right",
-						["pos"] = 11,
-						["bar"] = 3,
-					},
-					["TradeSkillInfo"] = {
-						["enabled"] = false,
-					},
-					["IfThen Help"] = {
-						["enabled"] = false,
-						["pos"] = 14,
 					},
 				},
 			},

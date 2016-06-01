@@ -1,4 +1,5 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
 	<!-- Install -->
+	<Script file="addons\BagSync.lua"/>
 	<Script file="addons\Bazooka.lua"/>
 </Ui>

@@ -1,8 +1,10 @@
 	local name, ns = ...
-	local version = 2 --If version update need to update version in ApplySetup() too
+	local version = 3 --If version update need to update version in ApplySetup() too
 	local MEDIA_PATH = "Interface\\AddOns\\Stuff\\Textures\\"
   local FONT = "Fonts\\FRIZQT__.ttf"
 	local CharName = UnitName("player")
+	
+	--GetAddOnMetadata("Stuff", "Version");
 	
 	--SavedVariablesPerCharacter
 	local function PerCharDB()
@@ -15,12 +17,16 @@
 	--SavedVariables
 	local function SetupDB()
 		StuffDB = {
+			AutoLootSolo = true,
+			AutoLootRaid = false,
+			AutoLootGroup = true,
 			AutoRepair = true,
 			BuyEssentials = true,
 			Chain = 2,
 			DisableChatFade = true,
 			EnableMailModule = true,
 			Greeting = true,
+			NoChatButtons = true,
 			Ralert = true,
 			SellGreyCrap = true,
 			TopMenu = true,
@@ -49,9 +55,11 @@
 		FCF_SavePositionAndDimensions(ChatFrame1)
   end
 	
-	--Global function to inject Bazooka SavedVariables see STUFF\Install\addons\Bazooka.lua
+	--Global function to inject SavedVariables see STUFF\Install\addons\
 	local function InstallAddonOptions()
-			StuffInstallBazooka()
+		StuffInstallBagSync()
+		StuffInstallBazooka()
+		--StuffInstallHandyNotes()
 	end
 	
 	--Currently not used
@@ -92,7 +100,7 @@
     --SetScaleSmallOnInstall()
 		InstallAddonOptions()
 		StuffDB.SetUpDone = true
-		StuffDB.versionnumber = 2
+		StuffDB.versionnumber = 3
 			--SetCVARSINSTALL()
 			print('Setup complete. Please reload UI to finish via "/rl".')
     end
@@ -105,15 +113,15 @@
    SetupFrame:SetFrameStrata("TOOLTIP")
    SetupFrame:SetFrameLevel("18")
      
-   local Backdrop = SetupFrame:CreateTexture(nil, "BACKGROUND")             --Backdrop is not working
+   local Backdrop = SetupFrame:CreateTexture(nil, "BACKGROUND")            
    	Backdrop:SetAllPoints(UIParent)
-   	Backdrop:SetTexture(0, 0, 0, 0.9)
+   	Backdrop:SetColorTexture(0, 0, 0, 0.9)
     SetupFrame.Backdrop = Backdrop
      
    local StuffLogo = SetupFrame:CreateTexture(nil, "BORDER")
    	StuffLogo:SetPoint("CENTER", SetupFrame, "CENTER")
     StuffLogo:SetSize(453, 194)
-    StuffLogo:SetTexture(MEDIA_PATH .. "Setup\\aegerUIlogo")
+    StuffLogo:SetTexture(MEDIA_PATH .. "Setup\\stufflogo")
 
 	local ReloadButton = CreateFrame("Button", nil, SetupFrame)
 		ReloadButton:SetPoint("TOP", SetupFrame, "BOTTOM")
@@ -216,8 +224,13 @@
     end
   	if (StuffDB.SetUpDone == nil) or (StuffDB.versionnumber ~= version) then
   	  DoSetup()
+  	  PerCharDB()
+  	  SetupDB()
     end
 		Greeting()
 	end
+	
+	_G.SLASH_STUFFDB = '/stuffdb'
+	SlashCmdList.STUFFDB = SetupDB
         
   ns:RegisterEvent("PLAYER_LOGIN", SetupCheck)

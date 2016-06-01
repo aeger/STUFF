@@ -1,11 +1,5 @@
---[======================================================[
-		Mail
-			Adds a open all button in the mail
-			with pooooooowar.
-
---]======================================================]
 local _, ns = ...
-if (not StuffDB.EnableMailModule) then return; end
+--if not (StuffDB.EnableMailModule) then return; end
 
 local LOOTDELAY = 0.3
 local MAX_LOOPS = 5

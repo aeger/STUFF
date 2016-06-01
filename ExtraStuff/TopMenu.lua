@@ -2,13 +2,8 @@
 	
 	local MEDIA_PATH = "Interface\\AddOns\\Stuff\\Textures\\"
 	local classcolor = (CUSTOM_CLASS_COLORS or RAID_CLASS_COLORS)[(select(2, UnitClass("player")))] 
-	
-	
---  Top Menu frame  --------------------------------------------------------------
 
-	
-	
-
+  --Function to flip the TopMenu graphic bar
 	local function flip(texture, horizontal)
 	  local ULx, ULy, LLx, LLy, URx, URy, LRx, LRy = texture:GetTexCoord()
 	    if horizontal then
@@ -18,9 +13,8 @@
 	   end
 	end
 	
-	
-
-	local function ShowBazookaBar1()
+	--initial bar display BazookaBar one is not used as it auto displays new broker plugins
+	function ShowBazookaBar1()
     Bazooka.db:SetProfile("BazBar1")
 	  if (StuffDB.SetUpDone) then
 	  	BazookaBar_3:Show()
@@ -28,37 +22,41 @@
 		end
 	end
 	
-	local function ShowBazookaBar2()
+	function ShowBazookaBar2()
     Bazooka.db:SetProfile("BazBar2")
 	  BazookaBar_3:Show()
 	  BazookaBar_1:Hide()
 	end
 	
-	local function ShowBazookaBar3()
+	function ShowBazookaBar3()
     Bazooka.db:SetProfile("BazBar3")
 	  BazookaBar_3:Show()
 	  BazookaBar_1:Hide()
 	end
 	
-	local function ShowBazookaBar4()
+	function ShowBazookaBar4()
     Bazooka.db:SetProfile("BazBar4")
 	  BazookaBar_3:Show()
 	  BazookaBar_1:Hide()
 	end
-		 
-	local function HideBazookaBars()
+	
+	--currently not used need to add function to hide	 
+	function HideBazookaBars()
     BazookaBar_3:Hide()
 	  BazookaBar_1:Hide()
 	end
-
+	
+	--Sets Topmenu graphic red during combat
 	local function TMCombatColorOn()
 	  TMMenuFrame.TMMenuBorder:SetVertexColor(1, 0, 0)
 	end
-
+	
+	--Sets Topmenu graphic back to class color after combat
 	local function TMCombatColorOff()
 	   TMMenuFrame.TMMenuBorder:SetVertexColor(classcolor.r, classcolor.g, classcolor.b, 1.0)
 	end
 	
+	--Frame for Topmenu
 	local function InitTMMenuFrame()
   	TMMenuFrame = CreateFrame('Frame', nil, UIParent)
 		TMMenuFrame:SetPoint("TOP", UIParent, "TOP", 0, 10)
@@ -174,20 +172,23 @@
 		TMMenuFrame.TMMenuPageL = TMMenuPageL
 	end
 	
-	local function TMMenuDisplay()
-      if not TMMenuFrame then
+	--Displays Topmenu
+	function TMMenuDisplay()
+    if not TMMenuFrame then
 	    InitTMMenuFrame()
 	  end
 	  TMMenuFrame:Show()
 	end
-
-	local function TMMenuHide()
-      if not TMMenuFrame then
+	
+	--Hides Topmenu
+	function TMMenuHide()
+    if not TMMenuFrame then
 	    InitTMMenuFrame()
 	  end
 	  TMMenuFrame:Hide()
 	end
 	
+	--Loads Topmenu at login and displays the correct Bazooka profile based off the savedvariable per character
 	local function TopMenuLoad()
   	if StuffDB.TopMenu then
 		 if (StuffDBPC.ShowBazBar == 1) then
