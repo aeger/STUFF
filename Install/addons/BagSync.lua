@@ -1,10 +1,11 @@
 local name, ns = ...
+local Stuff = LibStub("AceAddon-3.0"):GetAddon("Stuff")
 local profileVersion = "1.0"
  
  function StuffInstallBagSync()
 	if not IsAddOnLoaded("BagSync") then return end
 	
-	if (StuffDB.addonProfileVersion.BagSync == nil) or (StuffDB.addonProfileVersion.BagSync ~= profileVersion) then
+	if (Stuff.db.global.addonProfileVersion.BagSync == nil) or (Stuff.db.global.addonProfileVersion.BagSync ~= profileVersion) then
 		
 	_G.Stuff_BagSync_Install = {
 				["enableAuction"] = true,
@@ -22,7 +23,7 @@ local profileVersion = "1.0"
 
 	for k,v in pairs(Stuff_BagSync_Install) do
 		BagSyncOpt[k] = v
-		StuffDB.addonProfileVersion.BagSync = profileVersion
+		Stuff.db.global.addonProfileVersion.BagSync = profileVersion
 	end
 	end
 end

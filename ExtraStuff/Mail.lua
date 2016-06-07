@@ -1,5 +1,5 @@
 local _, ns = ...
---if not (StuffDB.EnableMailModule) then return; end
+local Stuff = LibStub("AceAddon-3.0"):GetAddon("Stuff")
 
 local LOOTDELAY = 0.3
 local MAX_LOOPS = 5
@@ -12,6 +12,7 @@ local bacon = {
 	["The Postmaster"] = true,
 }
 
+function Stuff_MailMod:OnEnable()
 local function breathe(self, elapsed)
 	self.ticker = self.ticker + elapsed
 
@@ -164,3 +165,4 @@ Mail:SetScript("OnEvent", function(self, event, ...)
 		return self[event](self, event, ...) 
 	end 
 end)
+end

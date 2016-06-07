@@ -1,0 +1,30 @@
+<Bindings>
+	<Binding name="ToggleTopMenu" header="Stuff" >
+		if InCombatLockdown() then
+			print("Cannot toggle TopMenu during combat.")
+			return
+		end
+		if TMMenuFrame:IsVisible() then
+    	TMMenuHide()
+      HideBazookaBars()
+      Stuff.db.profile.TopMenuShow = false
+      PlaySoundFile("Interface\\AddOns\\Stuff\\Textures\\sound\\click.mp3")
+    else
+    	TMMenuDisplay()
+      if Stuff.db.profile.ShowBazBar == 1 then
+				ShowBazookaBar1()
+			elseif
+				Stuff.db.profile.ShowBazBar == 2 then
+				ShowBazookaBar2()
+			elseif
+				Stuff.db.profile.ShowBazBar == 3 then
+				ShowBazookaBar3()
+			elseif
+				Stuff.db.profile.ShowBazBar == 4 then
+				ShowBazookaBar4()
+			end
+      Stuff.db.profile.TopMenuShow = true
+      PlaySoundFile("Interface\\AddOns\\Stuff\\Textures\\sound\\click.mp3")
+    end
+	</Binding>
+</Bindings>

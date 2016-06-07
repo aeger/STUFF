@@ -1,54 +1,56 @@
-	local name, ns = ...
-	local microMenu = CreateFrame("Frame", "RightClickMenu", UIParent, "UIDropDownMenuTemplate");
-	local MinimapButton = CreateFrame("Frame","StuffMinimapButton", Minimap)
-
-   MiniMapWorldMapButton:Hide()
-   MiniMapVoiceChatFrame:Hide()
-   MinimapZoomIn:Hide()
-   MinimapZoomOut:Hide()
-   MiniMapTracking:Hide()
+local name, ns = ...
+local Stuff = LibStub("AceAddon-3.0"):GetAddon("Stuff")
+local microMenu = CreateFrame("Frame", "RightClickMenu", UIParent, "UIDropDownMenuTemplate");
+local MinimapButton = CreateFrame("Frame","StuffMinimapButton", Minimap)
+	
+function Stuff_Minimap:OnEnable()
+	MiniMapWorldMapButton:Hide()
+  MiniMapVoiceChatFrame:Hide()
+  MinimapZoomIn:Hide()
+  MinimapZoomOut:Hide()
+  MiniMapTracking:Hide()
    
-   local newScale = 1.2
+  local newScale = 1.2
          
-   MinimapCluster:SetScale(newScale);
-   local tmpScale = Minimap:GetScale();
-   Minimap:SetScale(tmpScale + 0.1);
-   Minimap:SetScale(tmpScale)
+  MinimapCluster:SetScale(newScale);
+  local tmpScale = Minimap:GetScale();
+  Minimap:SetScale(tmpScale + 0.1);
+  Minimap:SetScale(tmpScale)
      
-   -- Mousewheel Scrolling.
-   Minimap:EnableMouseWheel(true)
-   Minimap:SetScript("OnMouseWheel", function(self, direction)
-   	if direction > 0 then
-    	_G.MinimapZoomIn:Click()
-    elseif direction < 0 then
-    	_G.MinimapZoomOut:Click()
-    end
-   end)
+  -- Mousewheel Scrolling.
+  Minimap:EnableMouseWheel(true)
+  Minimap:SetScript("OnMouseWheel", function(self, direction)
+  	if direction > 0 then
+   	_G.MinimapZoomIn:Click()
+   elseif direction < 0 then
+   	_G.MinimapZoomOut:Click()
+   end
+  end)
 
-   --Click-handling for tracking dropdown
-   Minimap:SetScript("OnMouseUp", function(self, button)
-   	if (button == "RightButton") then
-    	ToggleDropDownMenu(1,nil,MiniMapTrackingDropDown,"cursor")
-    elseif (button == "LeftButton") then
-    	Minimap_OnClick(self)
-    end
-   end)
+  --Click-handling for tracking dropdown
+  Minimap:SetScript("OnMouseUp", function(self, button)
+  	if (button == "RightButton") then
+   	ToggleDropDownMenu(1,nil,MiniMapTrackingDropDown,"cursor")
+   elseif (button == "LeftButton") then
+   	Minimap_OnClick(self)
+   end
+  end)
       
-   local microMenuList = {
-	 {text = "|cffFFFFFF".."Character", func = function() ToggleCharacter( "PaperDollFrame" ) end, notCheckable = true, fontObject = menuFont, icon = 'Interface\\PaperDollInfoFrame\\UI-EquipmentManager-Toggle' },
-	 {text = "|cffFFFFFF".."Spellbook", func = function() ToggleFrame(SpellBookFrame) end, notCheckable = true, fontObject = menuFont, icon = 'Interface\\MINIMAP\\TRACKING\\Class' },
-	 {text = "|cffFFFFFF".."Talents", func = function() ToggleTalentFrame() end, notCheckable = true, fontObject = menuFont, icon = 'Interface\\MINIMAP\\TRACKING\\Profession' },
-	 {text = "|cffFFFFFF".."Achievements", func = function() ToggleAchievementFrame() end, notCheckable = true, fontObject = menuFont, icon = 'Interface\\MINIMAP\\Minimap_shield_elite', },
-	 {text = "|cffFFFFFF".."Quest Log", func = function() ToggleFrame( WorldMapFrame )end, notCheckable = true, fontObject = menuFont, icon = 'Interface\\GossipFrame\\ActiveQuestIcon' },
-	 {text = "|cffFFFFFF".."Guild", func = function() ToggleGuildFrame( 1 ) end, notCheckable = true, fontObject = menuFont, icon = 'Interface\\GossipFrame\\TabardGossipIcon' },
-	 {text = "|cffFFFFFF".."Group Finder", func = function() PVEFrame_ToggleFrame() end, notCheckable = true, fontObject = menuFont, icon = 'Interface\\LFGFRAME\\BattlenetWorking0' },
-	 {text = "|cffFFFFFF".."Collections", func = function() ToggleCollectionsJournal() end, notCheckable = true, fontObject = menuFont, icon = 'Interface\\MINIMAP\\TRACKING\\StableMaster' },
-	 {text = "|cffFFFFFF".."Adventure Guide", func = function() ToggleEncounterJournal() end, notCheckable = true, fontObject = menuFont, icon = 'Interface\\MINIMAP\\TRACKING\\BattleMaster' },
-	 {text = "|cffFFFFFF".."Friends", func = function() ToggleFriendsFrame() end, notCheckable = true, fontObject = menuFont, icon = 'Interface\\FriendsFrame\\PlusManz-BattleNet' },
-	 {text = "|cffFFFFFF".."HELP", func = function() ToggleHelpFrame() end, notCheckable = true, fontObject = menuFont, icon = 'Interface\\CHATFRAME\\UI-ChatIcon-Blizz' },
-	 {text = "|cffFFFF00".."Log Out", func = function() Logout() end, notCheckable = true, fontObject = menuFont },
-	 {text = "|cffFE2E2E".."Force Exit", func = function() ForceQuit() end, notCheckable = true, fontObject = menuFont },
-	 }
+	local microMenuList = {
+		{text = "|cffFFFFFF".."Character", func = function() ToggleCharacter( "PaperDollFrame" ) end, notCheckable = true, fontObject = menuFont, icon = 'Interface\\PaperDollInfoFrame\\UI-EquipmentManager-Toggle' },
+		{text = "|cffFFFFFF".."Spellbook", func = function() ToggleFrame(SpellBookFrame) end, notCheckable = true, fontObject = menuFont, icon = 'Interface\\MINIMAP\\TRACKING\\Class' },
+		{text = "|cffFFFFFF".."Talents", func = function() ToggleTalentFrame() end, notCheckable = true, fontObject = menuFont, icon = 'Interface\\MINIMAP\\TRACKING\\Profession' },
+		{text = "|cffFFFFFF".."Achievements", func = function() ToggleAchievementFrame() end, notCheckable = true, fontObject = menuFont, icon = 'Interface\\MINIMAP\\Minimap_shield_elite', },
+	  {text = "|cffFFFFFF".."Quest Log", func = function() ToggleFrame( WorldMapFrame )end, notCheckable = true, fontObject = menuFont, icon = 'Interface\\GossipFrame\\ActiveQuestIcon' },
+	  {text = "|cffFFFFFF".."Guild", func = function() ToggleGuildFrame( 1 ) end, notCheckable = true, fontObject = menuFont, icon = 'Interface\\GossipFrame\\TabardGossipIcon' },
+	  {text = "|cffFFFFFF".."Group Finder", func = function() PVEFrame_ToggleFrame() end, notCheckable = true, fontObject = menuFont, icon = 'Interface\\LFGFRAME\\BattlenetWorking0' },
+	  {text = "|cffFFFFFF".."Collections", func = function() ToggleCollectionsJournal() end, notCheckable = true, fontObject = menuFont, icon = 'Interface\\MINIMAP\\TRACKING\\StableMaster' },
+	  {text = "|cffFFFFFF".."Adventure Guide", func = function() ToggleEncounterJournal() end, notCheckable = true, fontObject = menuFont, icon = 'Interface\\MINIMAP\\TRACKING\\BattleMaster' },
+	  {text = "|cffFFFFFF".."Friends", func = function() ToggleFriendsFrame() end, notCheckable = true, fontObject = menuFont, icon = 'Interface\\FriendsFrame\\PlusManz-BattleNet' },
+	  {text = "|cffFFFFFF".."HELP", func = function() ToggleHelpFrame() end, notCheckable = true, fontObject = menuFont, icon = 'Interface\\CHATFRAME\\UI-ChatIcon-Blizz' },
+	  {text = "|cffFFFF00".."Log Out", func = function() Logout() end, notCheckable = true, fontObject = menuFont },
+	  {text = "|cffFE2E2E".."Force Exit", func = function() ForceQuit() end, notCheckable = true, fontObject = menuFont },
+	}
 		
 	MinimapButton:SetHeight(32)
 	MinimapButton:SetWidth(32)
@@ -61,7 +63,7 @@
 	MinimapButton:CreateTexture('MinimapButtonTexture', 'BACKGROUND')
 	MinimapButton:SetClampedToScreen(true)
 	
-	MinimapButtonTexture:SetTexture('Interface\\AddOns\\Stuff\\Textures\\Minimap\\minimap.tga')
+	MinimapButtonTexture:SetTexture('Interface\\AddOns\\Stuff\\Textures\\Minimap\\minimap.blp')
 	MinimapButtonTexture:SetWidth(32)
 	MinimapButtonTexture:SetHeight(32)
 	MinimapButtonTexture:SetPoint('CENTER')
@@ -77,27 +79,27 @@
 		if TMMenuFrame:IsVisible() then
     	TMMenuHide()
       HideBazookaBars()
-      StuffDB.TopMenu = false
+      Stuff.db.profile.TopMenu = false
       PlaySoundFile("Interface\\AddOns\\Stuff\\Textures\\sound\\click.mp3")
       else
       TMMenuDisplay()
-      if StuffDBPC.ShowBazBar == 1 then
+      if Stuff.db.profile.ShowBazBar == 1 then
 				ShowBazookaBar1()
 			elseif
-				StuffDBPC.ShowBazBar == 2 then
+				Stuff.db.profile.ShowBazBar == 2 then
 					ShowBazookaBar2()
 			elseif
-				StuffDBPC.ShowBazBar == 3 then
+				Stuff.db.profile.ShowBazBar == 3 then
 					ShowBazookaBar3()
 			elseif
-				StuffDBPC.ShowBazBar == 4 then
+				Stuff.db.profile.ShowBazBar == 4 then
 					ShowBazookaBar4()
 			end
-      StuffDB.TopMenu = true
+      Stuff.db.profile.TopMenu = true
       PlaySoundFile("Interface\\AddOns\\Stuff\\Textures\\sound\\click.mp3")
     end
    end
-	end)
+  end)
 	
 	MinimapButton:SetScript('OnDragStart', function(self, button)
 		if IsShiftKeyDown() then
@@ -130,3 +132,4 @@
 	MinimapButton:SetScript('OnLeave', function(self)
 		GameTooltip:Hide()
 	end)	
+end

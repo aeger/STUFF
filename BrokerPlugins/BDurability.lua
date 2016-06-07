@@ -1,5 +1,7 @@
 local AUI, aui = ...
 
+function Stuff_BDurability:OnEnable()
+
 --Durability from Tekability
 local SLOTIDS, FONTSIZE, SLOTS = {}, 12, {
 	"Head", "Shoulder", "Chest", "Waist", "Legs", "Feet", "Wrist", "Hands",
@@ -112,4 +114,5 @@ function dataobj.OnEnter(self)
 	end
 
 	GameTooltip:Show()
+end
 end

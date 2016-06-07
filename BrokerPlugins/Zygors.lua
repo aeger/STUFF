@@ -1,5 +1,7 @@
 local name, ns = ...
 
+function Stuff_Zygors:OnEnable()
+
 if not IsAddOnLoaded("ZygorGuidesViewer") then return end
 LibStub:GetLibrary("LibDataBroker-1.1"):NewDataObject("Zygors", {
 	type = "launcher",
@@ -21,3 +23,4 @@ end,
 		tooltip:AddLine("Right |cff00ff00Click|r to open Zygors options window")
 	end,
 })
+end

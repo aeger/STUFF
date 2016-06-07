@@ -1,5 +1,7 @@
 local name, ns = ...
 
+function Stuff_TinyDPS:OnEnable()
+
 if not IsAddOnLoaded("TinyDPS") then return end
 local function toggle()
   if tdpsFrame:IsVisible() then
@@ -28,3 +30,4 @@ end,
 		tooltip:AddLine("Left |cff00ff00Click|r to toggle TinyDPS frame")
 	end,
 })
+end

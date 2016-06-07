@@ -1,5 +1,5 @@
 local name, ns = ...
-
+local Stuff = LibStub("AceAddon-3.0"):GetAddon("Stuff")
 ------------------------------------------
 -- Buying
 
@@ -242,15 +242,15 @@ end)
 ns:RegisterEvent("MERCHANT_SHOW", function(event, ...)
 	if IsShiftKeyDown() then return; end
 
-	if(StuffDB.AutoRepair) then
+	if(Stuff.db.global.Automation.AutoRepair) then
 		repair()
 	end
 
-	if(StuffDB.SellGreyCrap) then
+	if(Stuff.db.global.Automation.AutoSell) then
 		sellCrap(IsAltKeyDown() and IsControlKeyDown())
 	end
 
-	if(StuffDB.BuyEssentials) then
+	if(Stuff.db.global.Automation.BuyEssentials) then
 		restock()
 	end
 end)

@@ -1,36 +1,46 @@
 ## Interface: 70000
 ## Title: Stuff
-## Version: 3
+## Version: 1.0
 ## Author: Aeger
 ## Notes: Misc stuff. Most code stolen from Sticklord AbuEssentials.
 ## Dependencies: Bazooka
 ## SavedVariables: StuffDB
-## SavedVariablesPerCharacter: StuffDBPC
 
 ## libs ##
+libs\LibStub\LibStub.lua
+libs\AceAddon-3.0\AceAddon-3.0.lua
+libs\AceConfig-3.0\AceConfig-3.0.xml
+libs\AceConsole-3.0\AceConsole-3.0.lua
+libs\AceDB-3.0\AceDB-3.0.lua
+libs\AceDBOptions-3.0\AceDBOptions-3.0.lua
+libs\AceEvent-3.0\AceEvent-3.0.xml
+libs\AceHook-3.0\AceHook-3.0.xml
 libs\libstuff.lua
 libs\LibDataBroker-1.1.lua
 
+Core.lua
 Setup.lua
 Install\addons.xml
-
-Stuff.lua
 Options.lua
+Bindings.xml
 
 ExtraStuff\ActionBars.lua
-ExtraStuff\AutoDepositRegs.lua
+ExtraStuff\Automation.lua
+ExtraStuff\Blockers.lua
 ExtraStuff\Buffs.lua
 ExtraStuff\UnitFrame.lua
 ExtraStuff\ChatMods.lua
-ExtraStuff\HideBodyGuard.lua
 ExtraStuff\Mail.lua
-ExtraStuff\minimap.lua
+ExtraStuff\Minimap.lua
 ExtraStuff\RareAlert.lua
+ExtraStuff\SlashCommands.lua
+ExtraStuff\StopAddonSpam.lua
 ExtraStuff\TopMenu.lua
 --ExtraStuff\SendStuff.lua
 ExtraStuff\Vendor.lua
 
 BrokerPlugins\AutoLoot.lua
 BrokerPlugins\BDurability.lua
+BrokerPlugins\StuffLDB.lua
 BrokerPlugins\TinyDPS.lua
 BrokerPlugins\Zygors.lua

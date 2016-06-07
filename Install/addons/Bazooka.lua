@@ -1,10 +1,11 @@
 local name, ns = ...
+local Stuff = LibStub("AceAddon-3.0"):GetAddon("Stuff")
 local profileVersion = "1.0"
 
 function StuffInstallBazooka()
 	if not IsAddOnLoaded("Bazooka") then return end
 	
-	if (StuffDB.addonProfileVersion.Bazooka == nil) or (StuffDB.addonProfileVersion.Bazooka ~= profileVersion) then
+	if (Stuff.db.global.addonProfileVersion.Bazooka == nil) or (Stuff.db.global.addonProfileVersion.Bazooka ~= profileVersion) then
 			
 	_G.Stuff_Bazooka_Install = {
 		["BazBar1"] = {
@@ -290,7 +291,7 @@ function StuffInstallBazooka()
 	
 	for k,v in pairs(Stuff_Bazooka_Install) do
 		BazookaDB.profiles[k] = v
-		StuffDB.addonProfileVersion.Bazooka = profileVersion
+		Stuff.db.global.addonProfileVersion.Bazooka = profileVersion
 	end
 	end
 end
