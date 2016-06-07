@@ -1,5 +1,0 @@
---[[ Version ]]--
-
-function OmniCC:GetVersion()
-	return GetAddOnMetadata('OmniCC', 'Version')
-end
