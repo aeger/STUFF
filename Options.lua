@@ -102,18 +102,35 @@ local function GetOptions()
 							},
 							autoRez = {
 								order = 191,
-								name = "Auto accept resurrection requests",
+								name = "* Auto accept rez",
 								width = "full",
 								type = "toggle",
 								get = function() return Stuff.db.profile.Automation.AcceptRez end,
 								set = function(info, value) Stuff.db.profile.Automation.AcceptRez = value
 								end,
 							},
+							bspacer192 = {
+								order = 192,
+								type = "description",
+								width = "full",
+								name = "\n\n",
+							},
 							autoReload = {
 								order = 194,
 								name = "Reload UI to set options",
 								type = "execute",
 								func = function() ReloadUI() end,
+							},
+							bspacer198 = {
+								order = 198,
+								type = "description",
+								width = "full",
+								name = "\n\n",
+							},
+							autoDesc2 = {
+								order = 199,
+								type = "description",
+								name = "* indicates the option is set per character.",
 							},
 						},
 					},
@@ -125,7 +142,7 @@ local function GetOptions()
 						args = {
 							blockDuel = {
 								order = 220,
-								name = "Block duel requests",
+								name = "* Block duel",
 								width = "full",
 								type = "toggle",
 								get = function() return Stuff.db.profile.Automation.BlockDuel end,
@@ -134,7 +151,7 @@ local function GetOptions()
 							},
 							blockPetduel = {
 								order = 230,
-								name = "Block pet duel requests",
+								name = "* Block pet duel",
 								width = "full",
 								type = "toggle",
 								get = function() return Stuff.db.profile.Automation.BlockPetDuel 	end,
@@ -149,11 +166,28 @@ local function GetOptions()
 								set = function(info, value) Stuff.db.global.Automation.HideErrors = value
 								end,
 							},
-							blockReload = {
+							bspacer2 = {
 								order = 241,
+								type = "description",
+								width = "full",
+								name = "\n\n",
+							},
+							blockReload = {
+								order = 242,
 								name = "Reload UI to set options",
 								type = "execute",
 								func = function() ReloadUI() end,
+							},
+							bspacer243 = {
+								order = 243,
+								type = "description",
+								width = "full",
+								name = "\n\n",
+							},
+							bDesc2 = {
+								order = 244,
+								type = "description",
+								name = "* indicates the option is set per character.",
 							},
 						},
 					},
@@ -183,7 +217,7 @@ local function GetOptions()
 								set = function(info, value) Stuff.db.global.BrokerPlugins.BDurability = value
 								end,
 							},
-							bdurability = {
+							bstuff = {
 								order = 321,
 								name = "Stuff LDB",
 								type = "toggle",
@@ -254,9 +288,18 @@ local function GetOptions()
 				type = "group",
 				order = 200,
 				args = {
+					modMail = {
+						order = 109,
+						name = "Mail",
+						width = "full",
+						type = "toggle",
+						get = function() return Stuff.db.global.MailMod end,
+						set = function(info, value) Stuff.db.global.MailMod = value
+						end,
+					},
 					modMinimap = {
 						order = 110,
-						name = "Minimap enabled",
+						name = "Minimap",
 						width = "full",
 						type = "toggle",
 						get = function() return Stuff.db.global.Minimap end,

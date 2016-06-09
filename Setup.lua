@@ -51,10 +51,16 @@ end
 
 --Currently not used			
 local function SetCVARSINSTALL()
-	SetCVar("enableCombatText", 0)
-	SetCVar("CombatDamage", 0)
-	SetCVar("CombatHealing", 0)
+	SetCVar("enableFloatingCombatText", 1)
+	SetCVar("profanityFilter", 0)
 	SetCVar("deselectOnClick", 1)
+	SetCVar("alwaysShowActionBars", 1)
+	SetCVar("countdownForCooldowns", 1)
+	SetCVar("statusText", 1)
+	SetCVar("statusTextDisplay", BOTH)
+	SetCVar("cameraSmoothStyle", 0)
+	SetCVar("cameraWaterCollision", 0)
+	SetCVar("cameraDistanceMaxFactor", 1.8999999761581)
 end
 
 --Called by Install button in InitSetupFrame	
@@ -64,9 +70,9 @@ local function ApplySetup()
 	MoveChatFrame()
 	Stuff.db.profile.SetUpDone = true
 	Stuff.db.profile.versionnumber = Stuff_Version
-		--SetCVARSINSTALL()
-		print('Setup complete. Please reload UI to finish via "/rl".')
-  end
+	SetCVARSINSTALL()
+	print('Setup complete. Please reload UI to finish via "/rl".')
+end
 
 --Frame display for initial install
 local function InitSetupFrame()
