@@ -55,7 +55,7 @@ local defaults = {
  		},
  	},
 	profile = {
-  	Chain = 2,
+  	Chain = 0,
   	SetUpDone = false,
   	TopMenu = true,
   	ShowBazBar = 1,

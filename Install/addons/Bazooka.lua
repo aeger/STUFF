@@ -80,6 +80,10 @@ function StuffInstallBazooka()
 						["pos"] = 11,
 						["bar"] = 3,
 					},
+					["Stuff"] = {
+						["bar"] = 3,
+						["pos"] = 3,
+					},
 				},
 			},
 			["locked"] = true,
