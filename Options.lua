@@ -100,6 +100,22 @@ local function GetOptions()
 								set = function(info, value) Stuff.db.global.Automation.AutoSell = value
 								end,
 							},
+							autobuy = {
+								order = 141,
+								name = "Auto buy essentials",
+								type = "toggle",
+								get = function() return Stuff.db.global.Automation.BuyEssentials end,
+								set = function(info, value) Stuff.db.global.Automation.BuyEssentials = value
+								end,
+							},
+							autoplates = {
+								order = 142,
+								name = "Toggle nameplates on while in combat",
+								type = "toggle",
+								get = function() return Stuff.db.global.Automation.showNameplatesInCombat end,
+								set = function(info, value) Stuff.db.global.Automation.showNameplatesInCombat = value
+								end,
+							},
 							autoRez = {
 								order = 191,
 								name = "* Auto accept rez",
@@ -401,6 +417,29 @@ local function GetOptions()
 				func = function()
 					Stuff:EnableModule("SetupUI")
 					Stuff:DoSetup()
+				end,
+			},
+			test = {
+				type = "execute",
+				name = "test",
+				hidden = true,
+				order = 61,
+				func = function()
+					SetActionBarToggles(1, 1, 1, 1)
+					SHOW_MULTI_ACTIONBAR_4 = 1
+					MultiActionBar_Update()
+				end,
+			},
+			test2 = {
+				type = "execute",
+				name = "test2",
+				hidden = true,
+				order = 62,
+				func = function()
+					SetActionBarToggles(1, 1, 1)
+					SHOW_MULTI_ACTIONBAR_4 = false
+					MultiActionBar_Update()
+					--MultiBarLeft:Hide()
 				end,
 			},
 		},

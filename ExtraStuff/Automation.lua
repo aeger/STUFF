@@ -67,3 +67,22 @@ local function Echo(self, event, ...)
 end
 
 ns:RegisterEvent("CHAT_MSG_SYSTEM", Echo)
+
+		----------------------------------------------------------------------
+		-- Toggle nameplates on while in combat
+		----------------------------------------------------------------------
+
+local function PlatesOn()
+	if (Stuff.db.global.Automation.showNameplatesInCombat) then
+		SetCVar("nameplateShowEnemies", 1)
+	end
+end
+
+local function PlatesOff()
+	if (Stuff.db.global.Automation.showNameplatesInCombat) then
+		SetCVar("nameplateShowEnemies", 0)
+	end
+end
+
+ns:RegisterEvent("PLAYER_REGEN_DISABLED", PlatesOn)
+ns:RegisterEvent("PLAYER_REGEN_ENABLED", PlatesOff)

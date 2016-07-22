@@ -44,6 +44,7 @@ local defaults = {
 			BuyEssentials = true,
 			HideErrors = true,
 			ShowErrorsFlag = 1,
+			showNameplatesInCombat = true,
 			ShowQuestUpdates = true,
 		},
  		BrokerPlugins = {

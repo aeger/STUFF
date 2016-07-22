@@ -1,6 +1,7 @@
 local name, ns = ...
 local Stuff = LibStub("AceAddon-3.0"):GetAddon("Stuff")
 local classcolor = (CUSTOM_CLASS_COLORS or RAID_CLASS_COLORS)[(select(2, UnitClass("player")))] 
+local Expand = CreateFrame("Button", nil, MultiBarLeft)
 	  
 function Stuff_ActionBars:OnEnable()
 	-- Replaces Action bar caps with custom graphic
@@ -23,7 +24,7 @@ function Stuff_ActionBars:OnEnable()
     
   ns:RegisterEvent("PLAYER_REGEN_ENABLED", CombatColorOff)
 	ns:RegisterEvent("PLAYER_REGEN_DISABLED", CombatColorOn)
-	
+			
 	-- make the actionbar background repeat itself --
 	function TexStuff()
     MainMenuBarTexture2:SetTexture("Interface\\MainMenuBar\\UI-MainMenuBar-Dwarf")
@@ -78,7 +79,7 @@ function Stuff_ActionBars:OnEnable()
 	--	if frame == "MinimapCluster" then o(self, a1, frame, a2, x+48, y)
 	--	elseif frame == "UIParent" then o(self, "BOTTOM", frame, "BOTTOM", 0, y) end
 	--end
-
+	
 	TexStuff()
 	MovStuff()
 	BarStuff()
